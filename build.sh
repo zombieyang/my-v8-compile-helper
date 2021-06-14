@@ -19,6 +19,7 @@ git fetch zombie 8.4
 git checkout zombie/8.4
 
 echo "=====[ Building V8 ]====="
+alias python=./venv2/bin/python2
 python ./tools/dev/v8gen.py x64.release -vv -- '
 is_debug = false
 v8_enable_i18n_support= false
