@@ -46,4 +46,4 @@ mkdir -p ./puerts/output/Inc/Blob/macOS
 cp SnapshotBlob.h ./puerts/output/Inc/Blob/macOS/
 rm -rf ./SnapshotBlob.h
 
-zip puerts/puerts-v8.zip ./puerts/output
+zip -r puerts/puerts-v8.zip ./puerts/output
