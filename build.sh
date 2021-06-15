@@ -15,8 +15,8 @@ git checkout refs/tags/$VERSION
 gclient sync
 
 git remote add zombie https://github.com/zombieyang/v8.git
-git fetch zombie 8.4
-git checkout zombie/8.4
+git fetch zombie 8.4done
+git checkout zombie/8.4done
 
 echo "=====[ Building V8 ]====="
 # alias python=./venv2/bin/python2
