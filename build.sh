@@ -1,7 +1,7 @@
 VERSION=8.4.371.19
 [ -z "$GITHUB_WORKSPACE" ] && GITHUB_WORKSPACE="$( cd "$( dirname "$0" )"/.. && pwd )"
 
-cd ~
+# cd ~
 echo "=====[ Getting Depot Tools ]====="	
 git clone -q https://chromium.googlesource.com/chromium/tools/depot_tools.git
 export PATH=$(pwd)/depot_tools:$PATH
@@ -10,7 +10,7 @@ gclient
 echo "=====[ Fetching V8 ]====="
 fetch v8
 echo "target_os = ['mac']" >> .gclient
-cd ~/v8
+# cd ~/v8
 git checkout refs/tags/$VERSION
 gclient sync
 
