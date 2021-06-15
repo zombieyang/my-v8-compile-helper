@@ -10,9 +10,8 @@ gclient
 echo "=====[ Fetching V8 ]====="
 fetch v8
 echo "target_os = ['mac']" >> .gclient
-# cd ~/v8
-# git checkout refs/tags/$VERSION
-git checkout 8.4.371
+cd v8
+git checkout refs/tags/$VERSION
 gclient sync
 
 git remote add zombie https://github.com/zombieyang/v8.git
