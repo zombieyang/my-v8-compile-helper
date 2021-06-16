@@ -3,12 +3,16 @@ VERSION=8.4.371.19
 
 # cd ~
 echo "=====[ Getting Depot Tools ]====="	
-git clone -q https://chromium.googlesource.com/chromium/tools/depot_tools.git
+if [ ! -d "depot_tools" ]
+    git clone -q https://chromium.googlesource.com/chromium/tools/depot_tools.git
+fi
 export PATH=$(pwd)/depot_tools:$PATH
 gclient
 
 echo "=====[ Fetching V8 ]====="
-fetch v8
+if [ ! -d "v8" ]
+    fetch v8
+fi
 echo "target_os = ['mac']" >> .gclient
 cd v8
 git checkout refs/tags/$VERSION
