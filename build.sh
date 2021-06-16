@@ -4,6 +4,7 @@ VERSION=8.4.371.19
 # cd ~
 echo "=====[ Getting Depot Tools ]====="	
 if [ ! -d "depot_tools" ]; then
+    echo "depot_tools not exist and fetch"
     git clone -q https://chromium.googlesource.com/chromium/tools/depot_tools.git
 fi
 export PATH=$(pwd)/depot_tools:$PATH
@@ -11,6 +12,7 @@ gclient
 
 echo "=====[ Fetching V8 ]====="
 if [ ! -d "v8" ]; then
+    echo "v8 not exist and fetch"
     fetch v8
 fi
 echo "target_os = ['mac']" >> .gclient
